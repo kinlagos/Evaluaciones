@@ -1,0 +1,25 @@
+{% extends 'diseno.html' %}
+{% block title %}Agregar Inscripcion{% endblock title %}
+
+{% block body %}
+<body>
+    {% include 'encabezado.html' %}
+    <div class="alert alert-info display-1 text-center">AGREGAR INSCRIPCION</div>
+
+    <form method="POST">
+        <table class="table">
+            {{formIn.as_table}}
+            {% csrf_token %}
+
+            <tr>
+                <td colspan=2>
+                    <a href="../inscripciones" class="btn btn-info mt-5">Inscripciones</a>
+                    <input type="submit" value="AGREGAR INSCRIPCION" class="btn btn-info float-end">
+                </td>
+            </tr>            
+        </table>       
+    </form>
+
+
+</body>
+{% endblock body %}

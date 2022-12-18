@@ -1,0 +1,25 @@
+{% extends 'diseno.html' %}
+{% block title %}Agregar Institucion{% endblock title %}
+
+{% block body %}
+<body>
+    {% include 'encabezado.html' %}
+    <div class="alert alert-info display-1 text-center">AGREGAR INSTITUCION</div>
+
+    <form method="POST">
+        <table class="table">
+            {{form.as_table}}
+            {% csrf_token %}
+
+            <tr>
+                <td colspan=2>
+                    <a href="../instituciones" class="btn btn-info mt-5">Instituciones</a>
+                    <input type="submit" value="AGREGAR INSTITUCION" class="btn btn-info float-end">
+                </td>
+            </tr>            
+        </table>       
+    </form>
+
+
+</body>
+{% endblock body %}
